@@ -13,7 +13,6 @@ app.use(express.json()); //Suporte para JSON no corpo(body) da requisição
 
 app.delete('/campeonatos/:id', async (req, res) => {
     const {id} = req.params;
-    const resultado = await deletaCampeonato(id);
 
     if (isNaN(id)) {
         res.status(404).send("Parâmetro inválido")
